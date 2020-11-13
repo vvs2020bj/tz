@@ -1,0 +1,40 @@
+<div id="body">
+	<div class="body__top"></div>
+	
+	<section class="app">
+		<div class="container"><div class="app__content">
+			<div id="add_task"><button type="button" class="btn btn-primary"><i class="fas fa-plus"></i>Добавить задачу</button></div>
+		</div></div>
+	</section>
+
+	<section id="task-list" class="app tab-box">
+		<div class="container"><div class="app__content">
+
+			<div class="row">
+				<div class="col-md-3 user-name">Имя пользователя</div>
+				<div class="col-md-3 user-email">E-mail</div>
+				<div class="col-md-5 user-task">Задача</div>
+				<div class="col-md-1 task-status text-center">Статус</div>
+			</div>
+
+			<? foreach($TASK_LIST as $e) :
+				$check_icon = $e['ts_closed']>0 ? 'check-square': 'square';
+			?>
+			<div class="row">
+				<div class="col-md-3 user-name"><?=$e['u_name']?></div>
+				<div class="col-md-3 user-email"><a href="mailto:vyacheslav.svirkin@gmail.com"><?=$e['u_email']?></a></div>
+				<div class="col-md-5 user-task"><?=$e['ts_text']?></div>
+				<div class="col-md-1 task-status text-center"><i class="far fa-lg fa-<?=$e['ts_closed']>0 ? 'check-square': 'square'?>"></i></div>
+			</div>
+			<? endforeach; ?>
+
+		</div></div>
+	</section>
+
+	<section class="app">
+		<div class="container"><div class="app__content">
+			<?=$PAGINATOR?>
+		</div></div>
+	</section>
+
+</div>

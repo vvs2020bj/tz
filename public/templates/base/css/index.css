@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@100;400;500&display=swap');
+
+html {height: 100%; width: 100%;}
+body {font: 11pt Roboto, Tahoma; color: #444; background-color: #fff; height: 100%; min-height: 100%;}
+
+header {background-color: #eee; height: 50px; position: absolute; top: 0; width: 100%;}
+	#main-logo {font-size: 150%;}
+	#lang_panel {}
+		#lang_panel a ~ * {display: inline-block; margin-left: 15px;}
+	#login {margin-top: -2px;}
+		button i {margin-right: 10px;}
+	
+div#body {height: auto; min-height: 100%; display: block; padding-bottom: 100px;}
+	.body__top {height: 50px;}
+	
+	#add_task {text-align: center; margin: 30px 0;}
+
+	.tab-box {padding: 40px 0;}
+		.tab-box .row {padding: 15px 0; cursor: pointer;}
+			.tab-box input, .tab-box textarea {width: 100%; padding: 5px;}
+
+	#task-list {}
+		#task-list .row:nth-child(2n+1) {background-color: #f8f8f8;}
+		#task-list .row:hover {background-color: #FFFAD3;}
+
+	#task-add-block {}
+		#task_save {margin-top: 30px;}
+
+
+	.paginator {padding: 25px 0 0; text-align: center;}
+		.paginator ul {border-left: solid 1px #ccc; display: inline-block;}
+			.paginator li {display: inline-block; border: solid 1px #ccc; margin-left: -1px;}
+			.paginator li.no-brd {border: none; padding: 0 10px;}
+				.paginator a {display: block; padding: 10px 15px;}
+			.paginator li.select {background-color: #007bff;}
+				.paginator li.select a {color: #fff;}
+
+footer {color: #fff; background-color: #3e404a; height: 70px; margin-top: -70px;}
+
+header .row, footer .row {padding-top: 11px;}
