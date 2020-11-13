@@ -22,8 +22,8 @@ Class View
 
 	public function render($file, $title='', $vars=[])
 	{
-		$PREF 		= '/public/templates/base';
-		$PREF_LIB 	= '/public/lib';
+		$PREF 		= $this->vars['site-pref'].'/public/templates/base';
+		$PREF_LIB 	= $this->vars['site-pref'].'/public/lib';
 		$TPL_PATH 	= APP_PATH.'/public/templates/base';
 
 		if(!empty($vars)) { extract($vars); }
@@ -40,8 +40,8 @@ Class View
 
 	public function render_body($file, $title='', $vars=[])
 	{
-		$PREF 		= '/public/templates/base';
-		$PREF_LIB 	= '/public/lib';
+		$PREF 		= $this->vars['site-pref'].'/public/templates/base';
+		$PREF_LIB 	= $this->vars['site-pref'].'/public/lib';
 		$TPL_PATH 	= APP_PATH.'/public/templates/base';
 
 		if(!empty($vars)) { extract($vars); }

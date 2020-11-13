@@ -13,7 +13,7 @@ Abstract Class Model
 
 	function __construct()
 	{
-		$this->db = new PDO('mysql:host=localhost;dbname=db;charset=utf8;', 'login', 'password'); // подключаем БД
+		$this->db = new PDO('mysql:host=localhost;dbname=tz;charset=utf8;', 'tz', 'mnbjyg6r'); // подключаем БД
 	}
 
 }
