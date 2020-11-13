@@ -16,7 +16,7 @@ load_add_task_form = function()
 	$('#add_task button').on({
 		click: function() {
 			
-			$.post('/index/get_form_task_add', {}, function(data) {
+			$.post(PREF+'/index/get_form_task_add', {}, function(data) {
 				history.pushState(null, null, '/');
 				$('#body').html(data);
 				$('input[name=name]').focus();
@@ -34,7 +34,7 @@ task_save = function()
 		click: function() {
 			var data = $('#task-add-block').serializeArray();
 
-			$.post('/index/save_task_add', data, function(data) {
+			$.post(PREF+'/index/save_task_add', data, function(data) {
 				$('#body').html(data);
 				load_add_task_form();
 			});
@@ -49,7 +49,7 @@ auth_form = function()
 	$('#login').on({
 		click: function() {
 			
-			$.post('/index/get_form_login', {}, function(data) {
+			$.post(PREF+'/index/get_form_login', {}, function(data) {
 				history.pushState(null, null, '/');
 				$('#body').html(data);
 				$('input[name=login]').focus();
@@ -67,7 +67,7 @@ login = function()
 		click: function() {
 			var data = $('#auth-block').serializeArray();
 
-			$.post('/index/login', data, function(data) {
+			$.post(PREF+'/index/login', data, function(data) {
 				$('#body').html(data);
 				auth_form();
 			});
